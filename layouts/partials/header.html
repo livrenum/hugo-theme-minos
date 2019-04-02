@@ -8,10 +8,13 @@
                 <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
                 {{ end }}
             </nav>
+            {{/* Make this configurable */}}
+            {{ if .Site.Params.search }}
             <nav id="sub-nav">
                 <div id="search-form-wrap">
                 </div>
             </nav>
+            {{ end }}
         </div>
     </div>
 </header>

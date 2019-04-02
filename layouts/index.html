@@ -37,7 +37,8 @@
                 </div>
                 <div class="article-entry" itemprop="articleBody">
                     <p>
-                        {{ if .Params.featuredImage }}<img src="{{.Params.featuredImage}}"><br>{{ end }}
+                        {{ if .Params.featuredImage }}
+                      <a href="{{ .RelPermalink }}"><img src="{{.Params.featuredImage}}"></a><br>{{ end }}
                         
                         {{/* Commenté summary, car trop lourd */}}
                         {{/* .Summary */}}
