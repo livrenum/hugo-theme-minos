@@ -38,10 +38,16 @@
                 <div class="article-entry" itemprop="articleBody">
                     <p>
                         {{ if .Params.featuredImage }}<img src="{{.Params.featuredImage}}"><br>{{ end }}
-                    {{ .Summary }}
+                        
+                        {{/* Commenté summary, car trop lourd */}}
+                        {{/* .Summary */}}
+                        {{ with .Description }}
+                        {{ . | markdownify }}
+                        {{ end }}
                     </p>
                     <p class="article-more-link">
-                        <a href="{{ .RelPermalink }}">Read More</a>
+                        <!-- i18n -->
+                        <a href="{{ .RelPermalink }}">Lire la suite &rarr;</a>
                     </p>
                 </div>
 

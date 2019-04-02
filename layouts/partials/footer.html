@@ -1,9 +1,16 @@
 <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; {{ now.Format "2006"}} {{ or .Site.Author.name .Site.Title }}
+            {{ if .Site.Params.copyright }}
+            {{ .Site.Params.copyright | markdownify }}
+            {{ else }}
+            &copy;
+            {{ end }}
+            {{ now.Format "2006"}}
+            {{ or .Site.Author.name .Site.Title }}
             <br />
-            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+            <!-- i18n -->
+            Site lancé avec <a href="https://gohugo.io" target="_blank">Hugo</a> en utilisant le thème <a href="https://github.com/livrenum/hugo-theme-minos/" target="_blank">Minos (modifié)</a>
         </div>
     </div>
     {{ template "_internal/google_analytics_async.html" . }}
