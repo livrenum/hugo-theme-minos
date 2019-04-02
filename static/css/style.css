@@ -1,3 +1,9 @@
+/**
+ * Couleurs
+ * --------
+ * bleu: #2b91ff
+ * paper_tint: #f9f8ec
+ */
 html,
 body,
 div,
@@ -186,7 +192,7 @@ a.article-title,
 .article-entry .gist .gist-file .gist-meta a,
 .layout-wrap-inner .category-list a,
 .tag-cloud a {
-  color: #111;
+  color: #2b91ff;
   text-decoration: none;
   border-bottom: 1px dotted transparent;
 }
@@ -284,6 +290,7 @@ a.article-title:hover,
   font-size: 14px;
   position: relative;
   border-bottom: 1px solid #ddd;
+/*  background-color: #fff;*/
 }
 #header.mobile-on #main-nav,
 #header.mobile-on #sub-nav {
